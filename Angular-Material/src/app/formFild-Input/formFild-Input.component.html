@@ -1,0 +1,49 @@
+<!-- <mat-form-field class="example-form-field" floatLabel="always" appearance="fill">
+  <mat-label> input fill</mat-label>
+  <input matInput type="text">
+</mat-form-field>
+
+
+<mat-form-field class="example-form-field"  appearance="outline">
+  <mat-label>Name</mat-label>
+  <input matInput type="text">
+</mat-form-field> -->
+
+<mat-form-field class="example-form-field">
+  <mat-label>Nome</mat-label>
+  <input matInput type="text">
+</mat-form-field>
+
+
+<mat-form-field class="example-form-field">
+  <mat-label>Nome</mat-label>
+  <input matInput type="text">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+</mat-form-field>
+
+<mat-form-field class="example-form-field">
+  <mat-label>Nome</mat-label>
+  <input matInput type="text" [(ngModel)]="value">
+  @if (value) {
+    <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  }
+</mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>Nome</mat-label>
+  <input #userName matInput type="text" placeholder="Name" maxlength="10" value="">
+  <mat-hint #userName align="start">Apenas {{userName.maxLength}} Caracteres</mat-hint>
+  <mat-hint #userName align="end">{{userName.value.length}}/10</mat-hint>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Postal Code</mat-label>
+  <input matInput maxlength="5" [(ngModel)]="postalCodeValue" placeholder="Ex. 94105">
+  <mat-hint align="end">{{ postalCodeValue.length }} / 5</mat-hint>
+</mat-form-field>
+<p>Você digitou: {{ postalCodeValue }}</p>
+
+

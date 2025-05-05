@@ -1,0 +1,66 @@
+/* Estilo do menu lateral */
+.sidenav {
+  width: 250px;
+  background-color: white;
+}
+
+/* Estilo da área principal */
+mat-sidenav-content {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Estilo da toolbar principal (fixa no topo) */
+mat-toolbar.toolbar-menu {
+  background-color: #ebebeb;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Estilo da toolbar secundária */
+mat-toolbar.toolbar-submenu {
+  background-color: #ebebeb;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  height: 64px;
+  position: relative; /* ou fixed, se desejar fixa também */
+  top: 64px;
+  z-index: 999;
+}
+
+/* Espaço para que o conteúdo não fique sob as toolbars */
+.content-wrapper {
+  padding: 90px 16px 24px 16px; // top 128px = toolbar-menu + submenu
+  box-sizing: border-box;
+  min-width: 100%; // garante que acompanha a largura da toolbar
+}
+
+/* Estilo de títulos ou blocos visuais */
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 8px;
+  color: black;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar mat-icon {
+  color: black;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+}

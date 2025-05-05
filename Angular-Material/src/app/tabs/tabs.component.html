@@ -1,0 +1,81 @@
+<h1>Simple Tabs</h1>
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" animationDuration="1000ms">
+  <mat-tab label="Second">
+    <ng-template matTabLabel>
+      <mat-icon class="tab-icon">settings</mat-icon>
+      Settings
+    </ng-template>
+    Content
+  </mat-tab>
+  
+  <mat-tab label="Third">
+    <ng-template matTabLabel>
+      <mat-icon class="tab-icon">person</mat-icon>
+      Person
+    </ng-template>
+    Content
+  </mat-tab>
+  
+</mat-tab-group>
+
+<br>
+<br>
+<h1>Tabs - Stretch and Below</h1>
+<mat-tab-group 
+mat-stretch-tabs="false"
+animationDuration="1000ms"
+mat-stretch-tabs
+mat-elevation-z4
+headerPosition="below">
+<mat-tab label="Second">
+  <ng-template matTabLabel>
+    <mat-icon class="tab-icon">settings</mat-icon>
+    Settings
+  </ng-template>
+  Content
+</mat-tab>
+
+<mat-tab label="Third">
+  <ng-template matTabLabel>
+    <mat-icon class="tab-icon">person</mat-icon>
+    Person
+  </ng-template>
+  Content
+</mat-tab>
+
+</mat-tab-group>
+
+<br>
+<br>
+
+<h1>Tabs - Color</h1>
+<mat-tab-group 
+animationDuration="1000ms"
+mat-stretch-tabs
+mat-elevation-z4
+headerPosition="below"
+color="warn"
+backgroundColor="primary">
+<mat-tab label="Second">
+  <div class="mat-tab">
+    <ng-template matTabLabel>
+      <mat-icon class="tab-icon">settings</mat-icon>
+      Settings
+    </ng-template>
+    <h1>Settings</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, veniam odit! Impedit incidunt nostrum voluptate. Doloremque id amet inventore voluptatum accusantium nemo dolor eaque iste! Ratione modi aliquid maiores similique.</p>
+  </div>
+</mat-tab>
+
+<mat-tab label="Third">
+  <div class="mat-tab">
+    <ng-template matTabLabel>
+      <mat-icon class="tab-icon">person</mat-icon>
+      Person
+    </ng-template>
+    <h1>Person</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, veniam odit! Impedit incidunt nostrum voluptate. Doloremque id amet inventore voluptatum accusantium nemo dolor eaque iste! Ratione modi aliquid maiores similique.</p>
+  </div>
+</mat-tab>
+
+</mat-tab-group>
