@@ -7,7 +7,7 @@
     [mode]="sidenavMode"
   >
     <mat-toolbar class="theme-primary">
-      Smart Examples
+      Projeto Escola
     </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="">Users</a>  
@@ -26,15 +26,12 @@
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <span *ngIf="popText">My App</span>
+      <span *ngIf="popText">Meu Portal</span>
     </mat-toolbar>
 
     <mat-toolbar class="toolbar-submenu theme-primary">
-      <span *ngIf="!popText">My App</span>
+      <span *ngIf="!popText">Meu Portal</span>
     </mat-toolbar>
-
-    <div class="content">
       <router-outlet></router-outlet>
-    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
