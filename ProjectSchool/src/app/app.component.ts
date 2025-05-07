@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MenuItem } from './shared/models/menuItem';
+import { menuItems } from './shared/models/menu';
 
 export const SCROLL_CONTAINER = 'mat-sidenav-content';
 export const TEXT_LIMIT = 50;
@@ -33,7 +35,7 @@ export class AppComponent implements AfterViewInit {
   public isSmallScreen = false;
   public popText = false;
   public applyShadow = false;
-
+  public items_menu: MenuItem[] = menuItems;
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngAfterViewInit(): void {
