@@ -55,16 +55,16 @@ export class AppComponent implements OnInit {
       .pipe(map(() => content.scrollTop))
       .subscribe((value: number) => this.determineHeader(value))
 
-    this.route.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      map(event => event as NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      let moduleName = event.url.split('/')[1]
-
-      this.menuName = this.items_menu.filter(
-        (item: MenuItem) => item.link == `/${moduleName}`
-      )[0].label;
-    })
+      this.route.events.pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(event => event as NavigationEnd)
+      ).subscribe((event: NavigationEnd) => {
+        const moduleName = event.url.split('/')[1];
+        const match = this.items_menu.find(
+          (item: MenuItem) => item.link === `/${moduleName}`
+        );
+        this.menuName = match ? match.label : 'Meu Portal';
+      });
   }
 
   determineHeader(scrollTop: number) {
