@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MenuItem } from './shared/models/menuItem';
 import { menuItems } from './shared/models/menu';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { ToolbarMenuComponent } from './shared/components/toolbar-menu/toolbar-menu.component';
 
 export const SCROLL_CONTAINER = 'mat-sidenav-content';
 export const TEXT_LIMIT = 50;
@@ -28,7 +29,8 @@ export const SHADOW_LIMIT = 100;
     MatListModule,
     RouterOutlet,
     RouterLink,
-    MatTooltipModule
+    MatTooltipModule,
+    ToolbarMenuComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

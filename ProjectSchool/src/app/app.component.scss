@@ -6,11 +6,8 @@ mat-sidenav-container {
   height: 100vh;
 }
 
-.toolbar-menu {
-  position: fixed;
-  font-size: 1rem;
-  top: 0;
-  z-index: 1001;
+mat-toolbar-row {
+  padding: 0;
 }
 
 .toolbar-submenu {
@@ -21,14 +18,14 @@ mat-sidenav-container {
   display: flex;
   flex-direction: column;
   align-items: start;
-  //background-color: #575757;
+   background-color: #575757;
 
   &-top {
     height: 40px;
   }
 
   &-title {
-    margin: 30px 32px;
+    padding: 52px 30px;
   }
 }
 

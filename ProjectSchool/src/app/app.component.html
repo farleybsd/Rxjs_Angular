@@ -1,10 +1,10 @@
-<mat-toolbar
-  class="toolbar-menu"
-  color="secondary"
-  [class.mat-elevation-z4]="applyShadow"
-  >  
-  <span *ngIf="popText">{{menuName}}</span>
-</mat-toolbar>
+<app-toolbar-menu
+  [menuTitle]="menuName"
+  [popText]="popText"
+  [shadow]="applyShadow"
+  [items_menu]="items_menu"
+  >
+</app-toolbar-menu>
 <mat-sidenav-container>
   <mat-sidenav
     class="sidenav mat-elevation-z8"
@@ -32,7 +32,7 @@
 
   <mat-sidenav-content>
       <mat-toolbar class="toolbar-submenu">
-          <div class="toolbar-submenu-top">
+          <mat-toolbar-row class="toolbar-submenu-top">
             <button
             matTooltip="{{sidenav.opened ? 'Fechar menu' : 'abrir menu'}}"
             matTooltipPosition="right"
@@ -44,10 +44,10 @@
               {{sidenav.opened ? 'close' : 'menu'}}
             </mat-icon>
           </button>
-        </div>
-        <div class="oolbar-submenu-title">
+        </mat-toolbar-row>
+        <mat-toolbar-row class="oolbar-submenu-title">
           <span *ngIf="!popText">Meu Portal</span>
-        </div>
+        </mat-toolbar-row>
         
       </mat-toolbar>
       <router-outlet></router-outlet>
