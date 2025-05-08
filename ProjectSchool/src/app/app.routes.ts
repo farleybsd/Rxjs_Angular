@@ -8,8 +8,14 @@ import { CoursesComponent } from './pages/cursos/courses/courses.component';
 import { StudentsComponent } from './pages/students/students/students.component';
 import { SupportComponent } from './pages/supports/support/support.component';
 import { TeachersComponent } from './pages/teachers/teachers/teachers.component';
+import { CourseListComponent } from './pages/cursos/course-list/course-list.component';
 
 export const routes: Routes = [
+  {
+    path: '',
+    pathMatch:  'full',
+    redirectTo: 'dash'
+  },
   {
     path: 'users',
     component: UsersComponent,
@@ -46,6 +52,15 @@ export const routes: Routes = [
     component: TeachersComponent,
     children: []
   },
+  {
+    path: 'list', 
+    component: CourseListComponent,
+    children: []
+  },
   { path: '', redirectTo: 'users', pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: 'dash'
+  },
  
 ];
